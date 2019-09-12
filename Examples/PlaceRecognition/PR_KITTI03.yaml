@@ -1,0 +1,175 @@
+%YAML:1.0
+
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. Adjust them!
+#--------------------------------------------------------------------------------------------
+
+# Camera calibration and distortion parameters (OpenCV) 
+Camera.fx: 721.5377
+Camera.fy: 721.5377
+Camera.cx: 609.5593
+Camera.cy: 172.854
+
+Camera.k1: 0.0
+Camera.k2: 0.0
+Camera.p1: 0.0
+Camera.p2: 0.0
+
+Camera.width: 1241
+Camera.height: 376
+
+# Camera frames per second 
+Camera.fps: 10.0
+
+# stereo baseline times fx
+Camera.bf: 387.5744
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 1
+
+# Close/Far threshold. Baseline times.
+ThDepth: 40
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 2000
+
+# ORB Extractor: Scale factor between levels in the scale pyramid 	
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid	
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+# Image is divided in a grid. At each cell FAST are extracted imposing a minimum response.
+# Firstly we impose iniThFAST. If no corners are detected we impose a lower value minThFAST
+# You can lower these values if your images have low contrast			
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.6
+Viewer.KeyFrameLineWidth: 2
+Viewer.GraphLineWidth: 1
+Viewer.PointSize: 2
+Viewer.CameraSize: 0.7
+Viewer.CameraLineWidth: 3
+Viewer.ViewpointX: 0
+Viewer.ViewpointY: -100
+Viewer.ViewpointZ: -0.1
+Viewer.ViewpointF: 2000
+
+
+# -----------------------------------------------------------------------------------------------------
+# StVO parameters
+# -----------------------------------------------------------------------------------------------------
+# kf decision (SLAM) parameters
+min_entropy_ratio     : 0.85
+max_kf_t_dist         : 5.0
+max_kf_r_dist         : 15.0
+
+# StVO-PL options
+# -----------------------------------------------------------------------------------------------------
+has_points         : true      # true if using points
+has_lines          : true      # true if using line segments
+use_fld_lines      : false      # true if using FLD detector
+lr_in_parallel     : false      # true if detecting and matching features in parallel
+pl_in_parallel     : false      # true if detecting points and line segments in parallel
+best_lr_matches    : true      # true if double-checking the matches between the two images
+adaptative_fast    : true      # true if using adaptative fast_threshold
+use_motion_model   : true     # true if using constant motion model
+
+# Tracking parameters
+# -----------------------------------------------------------------------------------------------------
+# Point features
+#max_dist_epip     : 0.0        # max. epipolar distance in pixels
+min_disp          : 1.0        # min. disparity (avoid points in the infinite)
+#min_ratio_12_p    : 0.75       # min. ratio between the first and second best matches
+
+# Line segment features
+line_sim_th       : 0.75       # threshold for cosine similarity
+stereo_overlap_th : 0.75
+f2f_overlap_th    : 0.75
+min_line_length   : 0.025      # min. line length (relative to img size)
+line_horiz_th     : 0.1        # parameter to avoid horizontal lines (pixels)
+min_ratio_12_l    : 0.9        # parameter to avoid outliers in line matching
+ls_min_disp_ratio : 0.7        # min ratio between min(disp)/max(disp) for a LS
+
+# LSD parameters
+lsd_nfeatures    : 500         # set to 0 if keeping all lines (300)
+lsd_refine       : 0
+lsd_scale        : 1.2
+lsd_sigma_scale  : 0.6
+lsd_quant        : 2.0
+lsd_ang_th       : 22.5
+lsd_log_eps      : 1.0
+lsd_density_th   : 0.6
+lsd_n_bins       : 1024
+
+# Optimization parameters
+# -----------------------------------------------------------------------------------------------------
+max_iters        : 5           # max. number of iterations in the first stage of the optimization
+max_iters_ref    : 10          # max. number of iterations in the refinement stage
+inlier_k         : 1.0         # factor to discard outliers before the refinement stage
+
+# Feature detection parameters
+# -----------------------------------------------------------------------------------------------------
+matching_strategy : 0
+matching_s_ws     : 10
+matching_f2f_ws   : 3
+
+# -----------------------------------------------------------------------------------------------------
+# PLSLAM parameters
+# -----------------------------------------------------------------------------------------------------
+
+fast_matching         : true
+has_refinement        : false
+mutithread_slam       : false
+
+# lm numbers and errors
+min_lm_obs            : 4
+max_common_fts_kf     : 0.9
+
+max_kf_epip_p         : 1.0
+max_kf_epip_l         : 1.0
+
+max_lm_3d_err         : 0.1
+max_lm_dir_err        : 0.1
+max_point_point_error : 0.1
+max_point_line_error  : 0.1
+max_dir_line_error    : 0.1
+
+# graphs parameters
+min_lm_ess_graph      : 150
+min_lm_cov_graph      : 75
+min_kf_local_map      : 3
+
+# LBA
+lambda_lba_lm         : 0.00001     # (if auto, this is the initial tau)
+lambda_lba_k          : 10.0
+max_iters_lba         : 15
+
+# Loop closure
+vocabulary_p          : ""
+vocabulary_l          : ""
+
+lc_mat                : 0.5
+lc_res                : 1.5
+lc_unc                : 0.01
+lc_inl                : 0.3
+lc_trs                : 1.5
+lc_rot                : 35.0
+
+max_iters_pgo         : 100
+lc_kf_dist            : 50
+lc_kf_max_dist        : 50
+lc_nkf_closest        : 4
+lc_inlier_ratio       : 30.0
+
+min_pt_matches        : 10
+min_ls_matches        : 6
