@@ -4,7 +4,7 @@ ORB_line_SLAM is an extension to the classic ORB_SLAM2 that make use of both poi
 
 Abstract:
 ------------
-![](https://github.com/robotseu/ORB_Line_SLAM/blob/master/snapshot1.jpg)
+<img src="https://github.com/robotseu/ORB_Line_SLAM/blob/master/snapshot1.jpg", weight="240"> <br>
 The combination of wearable sensors and Augmented Reality (AR) technology has shown promising prospects in assisting substation inspection, especially when the tasks are infrequent and unfamiliar to human operators. In this paper, a wearable-assisted system (WAS) is proposed for task-specific global navigation and position-aware workflow guidance using a head-mounted stereo camera. The key of our proposal is an extended stereo visual SLAM approach is proposed with Bags of Point and Line Word (BoPLW) pairs, which ensures more accurate and robust dynamic ego-localization performance against several challenges that are typical in substations, such as similar facilities, low-textured scenes and lighting changes. In addition, the paper proposes to learn a global Metric-Topological Abstract map (MTA-map) for supporting map-based re-localization and navigation guidance. A prototype of WAS is developed in which augmentations of guidance are delivered to users via an optical see-through display. The system is evaluated in field experiments designed as an substation inspection scenario and other similar industrial inspection applications. The results validate the practicability and effectiveness of the system. Our code is available at https://github.com/robotseu/ORB_Line_SLAM.
 
 Citation:
