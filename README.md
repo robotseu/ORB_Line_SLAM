@@ -1,6 +1,6 @@
 #ORB_Line_SLAM
 
-ORB_line_SLAM is an extension to the classic ORB_SLAM2 that make use of both point and line features.
+ORB_line_SLAM is an extension to the classic ORB_SLAM2 that make use of both point and line features. 
 
 Citation:
 ------------
