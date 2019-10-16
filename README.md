@@ -4,18 +4,7 @@ ORB_line_SLAM is an extension to the classic ORB_SLAM2 that make use of both poi
 
 Abstract:
 ------------
-
-<head> 
-<meta charset="gb2312" /> 
-<title>divcss5之居中实例</title> 
-<style> 
-.divcss5{text-align:center} 
-</style> 
-</head> 
-<body> 
-<div class="divcss5">我会被居中</div> 
-<div class="divcss5"><img src="https://github.com/robotseu/ORB_Line_SLAM/blob/master/snapshot1.jpg" width="240"/></div> 
-</body> 
+<img src="https://github.com/robotseu/ORB_Line_SLAM/blob/master/snapshot1.jpg" width="240" align="middle"/></div> 
 <br>
 
 
